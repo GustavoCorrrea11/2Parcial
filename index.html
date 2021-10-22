@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <!-- botones de texture e imagen -->
+  <div id="contentModels">
+    <div id="backBtn">Return</div>
+    <div class="btnOptionModels custom modelOne">
+      <img src="./assets/imagenes/Carro1.jpg" class="btnOptionModels custom modelOne">
+    </div>
+    <div class="btnOptionModels custom modelTwo">
+      <img src="./assets/imagenes/Carro2.jpg" class="btnOptionModels custom modelTwo">
+    </div>
+    <div class="btnOptionModels custom modelThree">
+      <img src="./assets/imagenes/Carro3.jpg" class="btnOptionModels custom modelThree">
+    </div>
+    <div class="btnOptionModels custom modelFour">
+      <img src="./assets/imagenes/Carro4.jpg" class="btnOptionModels custom modelFour">
+    </div>
+  </div>
+  <div id="contentTexture">
+      <img src="./assets/imagenes/Texture1/Texture1.jpg" class="btnOptionTexture custom texture1" data-size="Texture1" >
+    
+      <img src="./assets/imagenes/Texture2/Texture1.jpg" class="btnOptionTexture custom texture2" data-size="Texture2">
+    
+
+      <img src="./assets/imagenes/Texture3/Texture1.jpg" class="btnOptionTexture custom texture3" data-size="Texture3">
+    
+  </div>
+  
+
+
+  <div id="content">
+
+    <!-- importacion de imagenes -->
+    <img src="./assets/imagenes/logo1.png" class="imagen-logo">
+    <img src="./assets/imagenes/ModeloC1.png" class="imagen-modeloC1">
+    <img src="./assets/imagenes/ModeloC2.jpg" class="imagen-modeloC2">
+    <img src="./assets/imagenes/ModeloC3.jpg" class="imagen-modeloC3">
+    <img src="./assets/imagenes/ModeloC4.jpg" class="imagen-modeloC4">
+    <!-- <img src="./assets/imagenes/llanta.gif" class="imagen-modeloC5"> -->
+    <marquee WIDTH=100%  behavior=ALTERNATE direction=RIGHT FACE=impact>
+       
+      <img src="./assets/imagenes/rueda1.gif" class="imagen-modeloC6">
+    </marquee>
+    
+
+    <!-- texto trasparente de la imagen 1 -->
+    <div class="texto-C1">
+      <span>AUDI A6</span>
+      <span>Velocidad MAX: 200km/h</span>
+    </div>
+
+    <!-- texto trasparente para la imagen 2 -->
+    <div class="texto-C2">
+      <span>AUDI S5</span>
+      <span>Velocidad MAX: 150km/h</span>
+    </div>
+
+    <!-- texto trasparente para la imagen 2 -->
+    <div class="texto-C3">
+      <span>AUDI S6</span>
+      <span>Velocidad MAX: 180km/h</span>
+    </div>
+
+    <!-- texto trasparente para la imagen 2 -->
+    <div class="texto-C4">
+      <span>AUDI R8</span>
+      <span>Velocidad MAX: 190km/h</span>
+    </div>
+
+    <!-- panel de informacion del centro -->
+    <!-- <div class="panel-info">
+      <span class="texto-tittle">¿READY PARA LO QUE VIENE?</span>
+    </div> -->
+
+    <!-- panel de arriba logo -->
+    <div class="panel-arriba">
+      <span class="texto-arriba">AUDI</span>
+    </div>
+
+    <!-- menu de opciones -->
+    <div id="header">
+			<ul class="nav">
+				<li><a href="">Inicio</a></li>
+				<li><a href="">Servicios</a>
+					<ul>
+						<li><a href="">Audi A</a>
+              <ul>
+								<li><a href="">Audi A1</a></li>
+								<li><a href="">Audi A3</a></li>
+								<li><a href="">Audi A5</a></li>
+							</ul></li>
+						<li><a href="">Audi S</a>
+              <ul>
+								<li><a href="">Audi S3</a></li>
+								<li><a href="">Audi S4</a></li>
+								<li><a href="">Audi S5</a></li>
+							</ul></li>
+						<li><a href="">Audi Q</a>
+              <ul>
+								<li><a href="">Audi Q5</a></li>
+								<li><a href="">Audi Q6</a></li>
+								<li><a href="">Audi Q7</a></li>
+							</ul></li>
+						<li><a href="">Audi R</a>
+							<ul>
+								<li><a href="">Audi R8</a></li>
+								<li><a href="">Audi RS7</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Acerca de</a>
+					<ul>
+						<li><a href="">Nosotros</a></li>
+						<li><a href="">Misión</a></li>
+						<li><a href="">Visión</a></li>
+					</ul>
+				</li>
+				<li><a href="">Contacto</a></li>
+			</ul>
+		</div>
+
+    <!-- boton ver -->
+    <div class="btnOption small" data-size="10">
+      <div class="title">VER</div>
+    </div>
+  </div>
+  <script type="module">
+    import { changeModel, changeTexture } from './src/app.js';
+
+    const options = document.querySelectorAll('.btnOption');
+    const backBtn = document.querySelector('#backBtn');
+    const btnModelOne = document.querySelector('.modelOne');
+    const btnModelTwo = document.querySelector('.modelTwo');
+    const btnModelThree = document.querySelector('.modelThree');
+    const btnModelFour = document.querySelector('.modelFour');
+    const btnTexture1 = document.querySelectorAll('.btnOptionTexture');
+    
+    
+
+    options.forEach(optionSelected => {
+      optionSelected.onclick = function(){
+        
+        toogleContent();
+        
+      }
+    });
+
+    backBtn.onclick = function(){
+      toogleContent();
+      
+    }
+
+    
+    btnModelOne.onclick = function () {
+      changeModel('modelOne');
+    }
+
+    btnModelTwo.onclick = function () {
+      changeModel('modelTwo');
+    }
+
+    btnModelThree.onclick = function () {
+      changeModel('modelThree');
+    }
+
+    btnModelFour.onclick = function () {
+      changeModel('modelFour');
+    }
+
+    let Textures;
+    btnTexture1.forEach(btnTexture1Selected =>{
+      btnTexture1Selected.onclick = function(){
+        const optionTexture = this.dataset.size;
+        Textures = optionTexture;
+        changeTexture(Textures);
+      }
+    
+    });
+    
+
+    function toogleContent (){
+      content.style.display = content.style.display == 'none' ? 'flex' : 'none';
+    }
+
+    
+  </script>
+</body>
+
+</html>

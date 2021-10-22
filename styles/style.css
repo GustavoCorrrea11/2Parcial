@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+body #renderScene {
+  display: flex;
+  position: fixed;
+  flex-flow: column;
+  padding: 10px;
+  z-index: 1;
+}
+
+
+body #content {
+  display: flex;
+  position: fixed;
+  background-color: black;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+
+body #content .btnOption {
+  position: absolute;
+  border: 2px solid #ecf0f1;
+  width: 15vw;
+  height: 10vh;
+  margin: 1vw;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  background-color: black;
+  left: 41.5vw;
+  margin-bottom: 45vw;
+  
+}
+
+body #content .btnOption:hover {
+  background:gray;
+  width: 15vw;
+  color: black;
+}
+
+body #content .btnOption .title {
+  font-size: 150%;
+  margin-bottom: 2px;
+}
+
+.imagen-logo{
+  position: absolute;
+  width: 10vw;
+  margin-bottom: 45vw;
+  right: 89.5vw;
+  
+}
+
+.imagen-modeloC1{
+  position: absolute;
+  width: 50vw;
+  right: 50vw;
+  margin-bottom: 20vw;
+  
+  
+}
+
+.imagen-modeloC2{
+  position: absolute;
+  width: 50vw;
+  right: 50vw;
+  margin-bottom: -30vw;
+  
+  
+}
+
+.imagen-modeloC3{
+  position: absolute;
+  width: 50vw;
+  right: -0.5vw;
+  margin-bottom: 20vw;
+  
+  
+}
+
+
+.imagen-modeloC4{
+  position: absolute;
+  width: 50vw;
+  right: -0.5vw;
+  margin-bottom: -30vw;
+  
+  
+}
+
+.imagen-modeloC5{
+  position: absolute;
+  width: 10vw;
+  right: 45vw;
+  margin-bottom: -40vw;
+  z-index: 0;
+  
+}
+
+.imagen-modeloC6{
+  
+  width: 9vw;
+  margin-bottom: -0.5vw;
+  z-index: 5;
+}
+
+
+.panel-arriba{
+  position: absolute;
+  background: black;
+  width: 4.5vw;
+  height: 2vw;
+  font-size: 2vw;
+  margin-bottom: 45.5vw;
+  left: 11vw;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: default;
+  
+}
+
+.texto-C1{
+  position: absolute;
+  background: black;
+  color: #fff;
+  left: 0vw;
+  width: 35vw;
+  height: 10vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2vw;
+  font-family: cursive;
+  z-index: 1;
+  margin-bottom: 9vw;
+  cursor: default;
+  opacity: 0%;
+}
+
+.texto-C1:hover {
+  opacity: 50%;
+ z-index: 1;
+}
+
+.texto-C2{
+  position: absolute;
+  background: black;
+  color: #fff;
+  left: 0vw;
+  width: 35vw;
+  height: 10vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2vw;
+  font-family: cursive;
+  z-index: 1;
+  margin-bottom: -41vw;
+  cursor: default;
+  opacity: 0%;
+}
+
+.texto-C2:hover {
+  opacity: 50%;
+ z-index: 1;
+}
+
+.texto-C3{
+  position: absolute;
+  background: black;
+  color: #fff;
+  left: 65vw;
+  width: 35vw;
+  height: 10vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2vw;
+  font-family: cursive;
+  z-index: 1;
+  margin-bottom: 9vw;
+  cursor: default;
+  opacity: 0%;
+}
+
+.texto-C3:hover {
+  opacity: 50%;
+ z-index: 1;
+}
+
+.texto-C4{
+  position: absolute;
+  background: black;
+  color: #fff;
+  left: 65vw;
+  width: 35vw;
+  height: 10vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2vw;
+  font-family: cursive;
+  z-index: 1;
+  margin-bottom: -41vw;
+  cursor: default;
+  opacity: 0%;
+}
+
+.texto-C4:hover {
+  opacity: 50%;
+ z-index: 1;
+}
+
+#header {
+  position: absolute;
+  margin-bottom: 45vw;
+  width:500px;
+  font-family:Arial, Helvetica, sans-serif;
+  left: 73vw;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul, ol {
+  list-style:none;
+}
+
+.nav > li {
+  float:left;
+}
+
+.nav li a {
+  background-color:#000;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 12px;
+  display:block;
+}
+
+.nav li a:hover {
+  background-color:#434343;
+}
+
+.nav li ul {
+  display:none;
+  position:absolute;
+  min-width:140px;
+}
+
+.nav li:hover > ul {
+  display:block;
+}
+
+.nav li ul li {
+  position:relative;
+}
+
+.nav li ul li ul {
+  right:-140px;
+  top:0px;
+}
+
+
+body #contentModels {
+  display: flex;
+  position: fixed;
+  background: white;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  z-index: 2;
+  width: 20vw;
+  height: 100vh;
+}
+
+body #contentModels .btnOptionModels {
+  position: relative;
+  border: 1px solid #ecf0f1;
+  width: 20vw;
+  height: 25vh;
+  margin: 0vw;
+  border-radius: 15px;
+  padding: 0px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  left: 0vw;
+}
+
+body #contentModels .btnOptionModels:hover{
+  position: relative;
+  width: 25vw;
+  height: 30vh;
+  left: -2vw;
+}
+
+body #contentTexture {
+  display: flex;
+  position: fixed;
+  background: #ffffff00;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  z-index: 2;
+  width: 80vw;
+  height: 10vh;
+}
+
+body #contentTexture .btnOptionTexture {
+  border: 5px solid black;
+  width: 15vw;
+  height: 8vh;
+  margin: 2vw;
+  border-radius: 15px;
+  padding: 0px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  background: gray;
+}
+
+body #contentTexture .btnOptionTexture:hover {
+  width: 20vw;
+  height: 9vh;
+  margin-bottom: 5vw;
+}
+
+body #backBtn {
+  position: absolute;
+  border: 5px solid black;
+  width: 10vw;
+  height: 8vh;
+  margin: 10vw;
+  margin-bottom: 55vw;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  background: gray;
+  right: 78vw;
+}
+
+body #backBtn:hover {
+  width: 12vw;
+  
+  background: indigo;
+}
+
+
+
+
+
+
+
+
+
+
+
+
